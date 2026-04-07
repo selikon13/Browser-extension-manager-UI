@@ -1,0 +1,128 @@
+:root {
+  --bg: #0b1120;
+  --card: #1c2333;
+  --card-border: #2a334a;
+  --text: #e6e9ef;
+  --subtext: #9aa4bf;
+  --accent: #ff6b6b;
+  --filter-bg: #232c44;
+  --filter-border: transparent;
+  --filter-text: #9aa4bf;
+  --btn-bg: #2a3148;
+  --btn-text: #ffffff;
+}
+
+body.light {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --card-border: #e3e7f0;
+  --text: #1a1d2b;
+  --subtext: #5c647a;
+  --accent: #ff6b6b;
+  --filter-bg: #ffffff;
+  --filter-border: #e3e7f0;
+  --filter-text: #1a1d2b;
+
+  --btn-bg: #ffffff;
+  --btn-text: #1a1d2b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* header */ 
+
+.header {
+  max-width: 1180px;
+  margin: 30px auto;
+  background: #1a2133;
+  border-radius: 16px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.header__btn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid var(--card-border);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* main */
+
+.main {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.main__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+/* filter */
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter {
+  background: var(--filter-bg);
+  border: 1px solid var(--filter-border);
+  color: var(--filter-text);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter.active {
+  background: var(--accent);
+  color: white;
+}
+
+.filter:hover {
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
