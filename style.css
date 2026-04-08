@@ -126,3 +126,67 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  transition: 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3b4663;
+}
+
+/* TOP */
+.card__top {
+  display: flex;
+  gap: 14px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--subtext);
+}
+
+/* BOTTOM */
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.remove {
+  border: 1px solid #3a445f;
+  background: transparent;
+  color: #c9d1ff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
