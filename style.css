@@ -46,7 +46,7 @@ body {
   object-fit: contain;
 }
 
-/* header */ 
+/* header */
 
 .header {
   max-width: 1180px;
@@ -79,9 +79,9 @@ body {
 /* main */
 
 .main {
-    max-width: 1180px;
-    margin: auto;
-    padding: 0 20px;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 .main__top {
@@ -138,6 +138,7 @@ h1 {
   min-height: 150px;
   transition: 0.2s;
 }
+
 .card:hover {
   transform: translateY(-4px);
   border-color: #3b4663;
@@ -190,3 +191,61 @@ h1 {
   cursor: pointer;
 }
 
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #3a445f;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked+.slider {
+  background: var(--accent);
+}
+
+input:checked+.slider::before {
+  transform: translateX(16px);
+}
+
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main__top {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
