@@ -10,6 +10,8 @@
   --filter-text: #9aa4bf;
   --btn-bg: #2a3148;
   --btn-text: #ffffff;
+  --remove-text: #c9d1ff;
+  --remove-border: #3a445f;
 }
 
 body.light {
@@ -25,6 +27,8 @@ body.light {
 
   --btn-bg: #ffffff;
   --btn-text: #1a1d2b;
+  --remove-text: #000;
+  --remove-border: #000;
 }
 
 * {
@@ -194,9 +198,9 @@ h1 {
 }
 
 .remove {
-  border: 1px solid #3a445f;
+  border: 1px solid var(--remove-border);
+  color: var(--remove-text);
   background: transparent;
-  color: #c9d1ff;
   padding: 6px 14px;
   border-radius: 20px;
   cursor: pointer;

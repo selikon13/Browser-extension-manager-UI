@@ -118,6 +118,15 @@ function handleRemove(e) {
     render();
   }
 }
+document.querySelectorAll(".filter").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    currentFilter = btn.dataset.filter;
+    render();
+  });
+});
 
 const themeBtn = document.getElementById("themeToggle");
 
@@ -132,7 +141,7 @@ themeBtn.addEventListener("click", () => {
 
   const isLight = document.body.classList.contains("light");
 
-  themeBtn.textContent = isLight ? "☀️" : "🌙";
+  themeBtn.textContent = isLight ? "🌙" : "☀️";
 
   localStorage.setItem("theme", isLight ? "light" : "dark");
 });
