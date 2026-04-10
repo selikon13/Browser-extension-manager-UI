@@ -34,7 +34,7 @@ Browser extension manager UI
 
 ### Mobile
 - **Day background**
-![m*obile-day](screenshots/iPhone-12-Pro-1775832318286.jpeg)
+![mobile-day](screenshots/iPhone-12-Pro-1775832318286.jpeg)
 - **Night background**
 ![mobyle-night](screenshots/iPhone-12-Pro-1775832334203.jpeg)
 
